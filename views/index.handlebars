@@ -1,13 +1,13 @@
 <h1>Eat Da Burger!!!</h1>
 
-<img class="img" src="../public/assets/img/burger-vector-design_1114-320.jpg" width="300" alt="burger-pic">
+<img class="img" src="assets/img/burger-vector-design_1114-320.jpg" width="500" alt="burger-pic">
 
 <h2>Click on the Devour button to eat the burger!</h2>
 
 <ul>
   {{#each burgers}}
     {{#unless devoured}}
-      {{> burgers/burger-block devour=false}}
+      {{> burgers/button devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
@@ -17,7 +17,7 @@
 <ul>
   {{#each burgers}}
     {{#if devoured}}
-      {{> burgers/burger-devoured devoured=true}}
+      {{> burgers/button devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
@@ -32,3 +32,4 @@
 
   <button type="submit">Add Burger</button>
 </form>
+<br><br><br><br>
